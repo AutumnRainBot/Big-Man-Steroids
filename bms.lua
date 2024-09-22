@@ -1901,27 +1901,6 @@ do
 	runESP()
 end
 
-do
-	-- PVEYE DETECTION
-	local plabel = Instance.new("TextLabel")
-	do
-		plabel.BackgroundTransparency = 1
-		plabel.Position = UDim2.new(0.6, 0, 0.15 + (1.5 * 0.015), 0)
-		plabel.Size = UDim2.new(0.15, 0, 0.015, 0)
-		plabel.TextColor3 = Color3.new(1, 0, 0)
-		plabel.TextScaled = true
-		plabel.TextWrapped = true
-		plabel.Text = ""
-		plabel.TextTransparency = 0.5
-		plabel.Parent = module.ui._instance
-	end
-	spawn(function()
-		detectPVEye()
-		while wait(2) do
-			detectPVEye()
-		end
-	end)
-end
 
 do
 	ui.create("title", {
