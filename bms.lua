@@ -33,17 +33,17 @@ local color = {
 	yellow = Color3.new(1, 1, 140 / 255),
 }
 local saveConfig = function()
-	if writefile or true then
-		writefile("bigmansteroids.config", game:GetService("HttpService"):JSONEncode(module.config))
-	end
+	--if writefile or true then
+		--writefile("bigmansteroids.config", game:GetService("HttpService"):JSONEncode(module.config))
+	--end
 end
 local w1, f1 = ypcall(function()
 if readfile or true then
-	local w, f = ypcall(function()
-		for i, v in pairs(game:GetService("HttpService"):JSONDecode(readfile("bigmansteroids.config"))) do
-			module.config[i] = v
-		end
-	end)
+	--local w, f = ypcall(function()
+		--for i, v in pairs(game:GetService("HttpService"):JSONDecode(readfile("bigmansteroids.config"))) do
+			--module.config[i] = v
+		--end
+	--end)
 	if not w then
 		warn(f)
 	end
